@@ -752,6 +752,10 @@ body {
     gap: 20px;
   }
 
+  .hero {
+    padding-top: 150px;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -806,6 +810,10 @@ body {
 @media (max-width: 480px) {
   .container {
     padding: 0 15px;
+  }
+
+  .hero {
+    padding-top: 180px;
   }
 
   .hero-title {
