@@ -209,6 +209,21 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
+.tech-icon img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(10000%)
+    hue-rotate(90deg);
+  opacity: 0.8;
+}
+
+/* Hero section text-based icons show original colors */
+.tech-icon img[alt*="JavaScript"],
+.tech-icon img[alt*="PostgreSQL"] {
+  filter: none;
+  opacity: 1;
+}
+
 .tech-icon-1 {
   top: 20px;
   right: 20px;
@@ -373,6 +388,26 @@ body {
   font-size: 24px;
   color: #00ff88;
   margin-bottom: 5px;
+}
+
+.tech-icon-item img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 5px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(10000%)
+    hue-rotate(90deg);
+  opacity: 0.8;
+}
+
+/* Specific targeting for text-based icons to show original colors */
+.tech-icon-item img[alt*="TypeScript"],
+.tech-icon-item img[alt*="JavaScript"],
+.tech-icon-item img[alt*="HTML"],
+.tech-icon-item img[alt*="CSS"],
+.tech-icon-item img[alt*="Bootstrap"],
+.tech-icon-item img[alt*="PostgreSQL"] {
+  filter: none;
+  opacity: 1;
 }
 
 .tech-icon-item span {
