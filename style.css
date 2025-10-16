@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background-color: #1a1a1a;
@@ -72,6 +76,36 @@ body {
 
 .nav-link.active::after {
   content: ">";
+}
+
+/* CSS-only active navigation using :target pseudo-class */
+/* This works when sections are targeted via URL hash (e.g., #about, #skills) */
+#about:target ~ * .nav-link[href="#about"],
+#skills:target ~ * .nav-link[href="#skills"],
+#experience:target ~ * .nav-link[href="#experience"],
+#projects:target ~ * .nav-link[href="#projects"],
+#contact:target ~ * .nav-link[href="#contact"] {
+  color: #00ff88;
+}
+
+#about:target ~ * .nav-link[href="#about"]::before,
+#skills:target ~ * .nav-link[href="#skills"]::before,
+#experience:target ~ * .nav-link[href="#experience"]::before,
+#projects:target ~ * .nav-link[href="#projects"]::before,
+#contact:target ~ * .nav-link[href="#contact"]::before {
+  content: "<";
+  color: #00ff88;
+  font-weight: bold;
+}
+
+#about:target ~ * .nav-link[href="#about"]::after,
+#skills:target ~ * .nav-link[href="#skills"]::after,
+#experience:target ~ * .nav-link[href="#experience"]::after,
+#projects:target ~ * .nav-link[href="#projects"]::after,
+#contact:target ~ * .nav-link[href="#contact"]::after {
+  content: ">";
+  color: #00ff88;
+  font-weight: bold;
 }
 
 .social-links {
